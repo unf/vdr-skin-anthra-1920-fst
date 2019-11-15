@@ -1,0 +1,10 @@
+themes/*		var/lib/vdr/themes/
+anthra_1920_FSt.skin	usr/share/vdr-skins/anthra_1920_FSt/
+anthra_1920_FSt.colors	usr/share/vdr-skins/anthra_1920_FSt/
+Make.config		usr/share/vdr-skins/anthra_1920_FSt/
+Makefile		usr/share/vdr-skins/anthra_1920_FSt/
+text2skin-1.1.rng	usr/share/vdr-skins/anthra_1920_FSt/
+mainmenulogos		usr/share/vdr-skins/anthra_1920_FSt/
+submenulogos		usr/share/vdr-skins/anthra_1920_FSt/
+images			usr/share/vdr-skins/anthra_1920_FSt/
+xml			usr/share/vdr-skins/anthra_1920_FSt/
