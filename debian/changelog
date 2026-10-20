@@ -1,3 +1,22 @@
+vdr-skin-anthra-1920-fst (20140324-1fnu0~trixie) trixie; urgency=medium
+
+  * Repackaged for Debian 13: debhelper 13, Standards-Version 4.7.2,
+    Rules-Requires-Root: no, Multi-Arch: foreign, Section video.
+  * The skin is no longer generated at package build time and made
+    writable for vdr by chown in /usr. vdr-skin-anthra-update from
+    vdr-skin-anthra-common builds it on installation and on request from
+    the sources in /usr/share/vdr-skin-anthra/anthra_1920_FSt
+    and the options in the conffile /etc/vdr/anthra/anthra_1920_FSt.conf
+    into /var/lib/vdr/plugins/text2skin/anthra_1920_FSt.
+    Local options survive upgrades.
+  * Build the translations from po/ and validate the skin with the default
+    options against the text2skin RELAX NG schema (xmlstarlet).
+  * Drop the make-config patch, paths and defaults are in the conffile now.
+  * Machine-readable debian/copyright (DEP-5). Maintainer Frank Neumann
+    <fnu@vdr-portal.de>.
+
+ -- Frank Neumann <fnu@vdr-portal.de>  Tue, 20 Oct 2026 13:38:48 +0200
+
 vdr-skin-anthra-1920-fst (20140324-0fnu0~focal) focal; urgency=high
 
   * automatic rebuild
@@ -33,14 +52,14 @@ vdr-skin-anthra-1920-fst (20140324-0fnu0~trusty) trusty; urgency=high
 vdr-skin-anthra-1920-fst (20130420-1fnu0~trusty) trusty; urgency=high
 
   * add increase_channelinfo_blink_freq.patch
-    to stablize display info 
+    to stablize display info
 
  -- Frank Neumann <fnu@yavdr.org>  Thu, 20 Mar 2014 00:57:34 +0100
 
 vdr-skin-anthra-1920-fst (20130420-0fnu1~trusty) trusty; urgency=high
 
   * Fix displaying resolution
-    thanks to tomas from vdr-portal.de 
+    thanks to tomas from vdr-portal.de
 
  -- Frank Neumann <fnu@yavdr.org>  Sun, 21 Apr 2013 13:03:31 +0200
 
@@ -48,7 +67,7 @@ vdr-skin-anthra-1920-fst (20130413-4yavdr0~lucid) lucid; urgency=high
 
   * New version for VDR 1.7.28+
     thanks to tomas from vdr-portal.de
-  * Needs specific patched vdr-plugin-text2skin 
+  * Needs specific patched vdr-plugin-text2skin
 
  -- Frank Neumann <fnu@yavdr.org>  Wed, 17 Apr 2013 14:40:03 +0200
 
