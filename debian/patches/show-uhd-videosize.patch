@@ -1,0 +1,21 @@
+Description: show the video size also for UHD
+ The channel info showed the video size only for heights up to 1080 lines,
+ UHD (3840x2160) showed nothing. All sizes except 1080 now show
+ WIDTHxHEIGHT, 1080 lines still show 1920x1080.
+Author: Frank Neumann <fnu@vdr-portal.de>
+Forwarded: not-needed
+Last-Update: 2026-10-23
+---
+Index: vdr-skin-anthra-1920-fst/xml/02_channelInfo.xml
+===================================================================
+--- vdr-skin-anthra-1920-fst.orig/xml/02_channelInfo.xml
++++ vdr-skin-anthra-1920-fst/xml/02_channelInfo.xml
+@@ -107,7 +107,7 @@
+ 
+ <text x1="1656" x2="1768" y1="1048" y2="1070" align="center" color="TextButton" condition="not({TimerConflicts})" font="VDRSymbols Sans:Book@18" >T-CONFL</text>
+ <blink x1="1656" x2="1768" y1="1048" y2="1070" align="center" color="TextSmallButton" delay="1000" condition="{TimerConflicts}" font="VDRSymbols Sans:Book@18" >T-CONFL</blink>
+-<!--VIDEOSIZE--><text x1="1200" x2="1312" y1="1048" y2="1070" align="center" condition="lt({VideoSizeHeight},1080)" color="TextSmallButton" font="VDRSymbols Sans:Book@18">{VideoSizeWidth}x{VideoSizeHeight}</text>
++<!--VIDEOSIZE--><text x1="1200" x2="1312" y1="1048" y2="1070" align="center" condition="not(equal({VideoSizeHeight},1080))" color="TextSmallButton" font="VDRSymbols Sans:Book@18">{VideoSizeWidth}x{VideoSizeHeight}</text>
+ <!--VIDEOSIZE--><text x1="1200" x2="1312" y1="1048" y2="1070" align="center" condition="equal({VideoSizeHeight},1080)" color="TextSmallButton" font="VDRSymbols Sans:Book@18">1920x1080</text>
+ 
+ <text x1="1310" x2="1426" y1="1048" y2="1070" align="center" condition="{HasTeletext}" color="TextSmallButton" font="VDRSymbols Sans:Book@18">VTX</text>
