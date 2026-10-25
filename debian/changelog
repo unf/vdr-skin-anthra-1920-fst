@@ -1,3 +1,11 @@
+vdr-skin-anthra-1920-fst (20140324-3fnu0~trixie) trixie; urgency=medium
+
+  * Recording info: widen the line with channel and file size up to the
+    thumbnail, the file size was cut off with long channel names (new
+    patch wider-recording-info-line.patch).
+
+ -- Frank Neumann <fnu@vdr-portal.de>  Sun, 25 Oct 2026 16:51:56 +0100
+
 vdr-skin-anthra-1920-fst (20140324-2fnu0~trixie) trixie; urgency=medium
 
   * Show the video size in the channel info also for UHD (3840x2160)
