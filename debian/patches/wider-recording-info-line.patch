@@ -5,11 +5,11 @@ Description: widen the recording info line up to the thumbnail
 Author: Frank Neumann <fnu@vdr-portal.de>
 Forwarded: not-needed
 Last-Update: 2026-10-25
-Index: vdr-skin-anthra-1920-fst/anthra_1920_FSt.skin
+Index: vdr-skin-anthra-1920-fst/xml/03_menu.xml
 ===================================================================
---- vdr-skin-anthra-1920-fst.orig/anthra_1920_FSt.skin
-+++ vdr-skin-anthra-1920-fst/anthra_1920_FSt.skin
-@@ -379,7 +379,7 @@ MA 02110, USA
+--- vdr-skin-anthra-1920-fst.orig/xml/03_menu.xml
++++ vdr-skin-anthra-1920-fst/xml/03_menu.xml
+@@ -277,7 +277,7 @@
  			<text x1="120" x2="1400" y1="135" y2="175" color="TextDescr" font="VDRSymbols Sans:Bold@40">{RecordingTitle}</text>
  			<block  condition="{RecordingShortText}">
  				<rectangle x1="0" x2="1920" y1="361" y2="362"  color="TextLow"/>					
@@ -17,13 +17,13 @@ Index: vdr-skin-anthra-1920-fst/anthra_1920_FSt.skin
 +				<text x1="120" x2="1540" y1="220" y2="245" color="TextDescr" font="VDRSymbols Sans:Book@24" >{RecordingDateTime:%a %d.%m.%Y} | {RecordingDateTime:%H\:%M} Uhr | {RecordingLength} min | geschnitten: {RecordingCuttedLength} min | Kanal: {ChannelName} | Dateigroesse: {RecordingSize} MB</text>
  				<text x1="120" x2="1400" y1="270" y2="295" color="TextDescr"  font="VDRSymbols Sans:Book@27">{RecordingShortText}</text>
  				<scrolltext x1="120" x2="1800" y1="380" y2="920" color="TextDescr" font="Osd">{RecordingDescription} </scrolltext>
- <!--SCROLLARROWS-->	<image x1="40"  x2="57"  y1="380"  y2="395"    condition="{CanScrollUp}"  path="images/arrow2Up.png" />
-@@ -389,7 +389,7 @@ MA 02110, USA
+ <!--SCROLLBAR-->	<scrollbar x1="1877" x2="1880" y1="363" y2="920" color="TextHigh" bgColor="TextLow" condition="or({CanScrollUp},{CanScrollDown})"/>
+@@ -288,7 +288,7 @@
  			</block>
  			<block  condition="not({RecordingShortText})">
  				<rectangle x1="0" x2="1920" y1="361" y2="362"  color="TextLow"/>
 -				<text x1="120" x2="1400" y1="270" y2="295" color="TextDescr" font="VDRSymbols Sans:Book@24" >{RecordingDateTime:%a %d.%m.%Y} | {RecordingDateTime:%H\:%M} Uhr | {RecordingLength} min | geschnitten: {RecordingCuttedLength} min | Kanal: {ChannelName} | Dateigroesse: {RecordingSize} MB</text>
 +				<text x1="120" x2="1540" y1="270" y2="295" color="TextDescr" font="VDRSymbols Sans:Book@24" >{RecordingDateTime:%a %d.%m.%Y} | {RecordingDateTime:%H\:%M} Uhr | {RecordingLength} min | geschnitten: {RecordingCuttedLength} min | Kanal: {ChannelName} | Dateigroesse: {RecordingSize} MB</text>
  				<scrolltext x1="120" x2="1800" y1="380" y2="920" color="TextDescr" font="Osd">{RecordingDescription}</scrolltext>
+ <!--SCROLLBAR--><scrollbar x1="1879" x2="1880" y1="363" y2="920" color="TextHigh" bgColor="TextLow" condition="or({CanScrollUp},{CanScrollDown})"/>
  <!--SCROLLARROWS-->		<image x1="40"  x2="57"  y1="380"  y2="395"    condition="{CanScrollUp}"  path="images/arrow2Up.png" />
- <!--SCROLLARROWS-->		<image x1="40"  x2="57"  y1="903"  y2="918"    condition="{CanScrollDown}"  path="images/arrow2Down.png" />
